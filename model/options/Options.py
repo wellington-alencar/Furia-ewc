@@ -3,6 +3,7 @@ from model.fc.Fc import findFc
 from model.rainbowsix.RainbowSix import findRainbowsix
 from model.rocketleague.RocketLeague import findRocketLeague
 from model.all.AllGames import findAll
+from utilities.ConvertToJson import convertJson
 
 
 def panel():
@@ -11,16 +12,16 @@ def panel():
     match option:
         case 1:
             print("================ Jogos da Furia no CS2 ================")
-            findCs2()
+            convertJson(findCs2())
         case 2:
             print("================ Jogos da Furia no FC ================")
-            findFc()
+            convertJson(findFc())
         case 3:
             print("================ Jogos da Furia no Rainbow Six Siege ================")
-            findRainbowsix()
+            convertJson(findRainbowsix())
         case 4:
             print("================ Jogos da Furia no Rocket League ================")
-            findRocketLeague()
+            convertJson(findRocketLeague())
         case 5:
             findAll()
 
@@ -32,17 +33,3 @@ def menu():
     print("3 - Jogos da Furia no Rainbow Six Siege")
     print("4 - Jogos da Furia no Rocket league")
     print("5 - Todos os jogos da Furia")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
